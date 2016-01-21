@@ -1,6 +1,9 @@
 /* ---------------Sunnybrook CSS  */
 
-	#rh-dropdown {
+	
+	
+	@media(min-width:768px) {
+    #rh-dropdown {
 	position: fixed; 
 	background-color: transparent; 
 	width: 100%;
@@ -8,3 +11,4 @@
 	left: 0%;                    											
 
 	}
+}
