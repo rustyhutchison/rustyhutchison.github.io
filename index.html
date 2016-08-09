@@ -7,6 +7,12 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script language="javascript" type="text/javascript">
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
 
 <style>
 
@@ -195,7 +201,7 @@
     <div id="group1" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
-        <iframe src="http://rehomepro.idxhome.com/homesearch/94556" width="970" height="1730" frameborder="0" allowtransparency="true">
+        <iframe src="http://rehomepro.idxhome.com/homesearch/94556" frameborder="0" scrolling="no" onload="resizeIframe(this);" allowtransparency="true">
 <p>Your browser does not support iframes.</p>
 </iframe>
       </div>
