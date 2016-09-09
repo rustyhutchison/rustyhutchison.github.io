@@ -33,7 +33,7 @@ var FilterableProductTable = React.createClass({
             	<h1>header</h1>
                 
                  <ol>
-                 {products.map(function(product) {
+                 {this.props.products.map(function(product) {
                  	return <li key={product['.key']} >product.category</li>;
                  })}
                  </ol>
