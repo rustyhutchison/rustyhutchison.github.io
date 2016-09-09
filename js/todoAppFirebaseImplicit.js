@@ -8,7 +8,7 @@ var TodoList3 = React.createClass({
       return (
         <li key={ index }>
           <div>key: { item['.key'] }</div>
-          <div>first name: { item.first}</div>
+          <div>first name: { item.name}</div>
           <div>position: { item.position }</div>
           <div>height: { item.height }</div>
           <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
