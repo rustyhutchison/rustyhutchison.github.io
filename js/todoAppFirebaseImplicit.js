@@ -24,9 +24,6 @@ var TodoList3 = React.createClass({
 });
 
 var TodoApp3 = React.createClass({
-  var nextState = {};
-    nextState[e.target.name]=e.target.value;
-  
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -43,16 +40,12 @@ var TodoApp3 = React.createClass({
     this.bindAsArray(firebaseRef.limitToLast(25), 'prospects');
   },
 
-  nameChange: function(e) {
-    
+  onChange: function(e) {
+    var nextState = {};
+    nextState[e.target.name]=e.target.value;
     this.setState(nextState);
   },
   
-  
-  
-  onChange3: function(e) {
-    this.setState({height: e.target.value});
-  },
 
   removeItem: function(key) {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
@@ -84,9 +77,9 @@ var TodoApp3 = React.createClass({
       <div>
         <TodoList3 prospects={ this.state.prospects } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
-          <div>Name: <input onChange={ this.nameChange } value={ this.state.name } name="name"/></div>
-          <div>Position: <input onChange={ this.nameChange } value={ this.state.position } name="position"/></div>
-          <div>Height: <input onChange={ this.onChange3 } value={ this.state.height } name="height"/></div>
+          <div>Name: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
+          <div>Position: <input onChange={ this.onChange } value={ this.state.position } name="position"/></div>
+          <div>Height: <input onChange={ this.onChange } value={ this.state.height } name="height"/></div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
