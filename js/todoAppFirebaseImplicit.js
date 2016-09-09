@@ -37,7 +37,7 @@ var TodoApp3 = React.createClass({
 
   componentWillMount: function() {
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
-    this.bindAsArray(firebaseRef.limitToLast(25), 'prospects');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'products');
   },
 
   onChange: function(e) {
@@ -55,7 +55,7 @@ var TodoApp3 = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     if (this.state.name && this.state.name.trim().length !== 0) {
-      this.firebaseRefs['prospects'].push({
+      this.firebaseRefs['products'].push({
         name: this.state.name,
         position: this.state.position, // "name:" changes the input attribute category
         height: this.state.height
@@ -67,12 +67,14 @@ var TodoApp3 = React.createClass({
       });
     }
     this.state = String.Empty;
+    this.state.position = String.Empty;
+    this.state.height = String.Empty;
   },
 
   render: function() {
     return (
       <div>
-        <TodoList3 prospects={ this.state.prospects } removeItem={ this.removeItem } />
+        <TodoList3 prospects={ this.state.products } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <div>Name: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
           <div>Position: <input onChange={ this.onChange } value={ this.state.position } name="position"/></div>
