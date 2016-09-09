@@ -36,7 +36,7 @@ var TodoApp3 = React.createClass({
   },
 
   componentWillMount: function() {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/');
     this.bindAsArray(firebaseRef.limitToLast(25), 'prospects');
   },
 
