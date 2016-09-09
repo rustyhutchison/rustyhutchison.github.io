@@ -89,6 +89,7 @@ var FilterableProductTable = React.createClass({
     
     getInitialState: function() {
         return {
+            items: [],
             filterText: '',
             inStockOnly: false
         };
