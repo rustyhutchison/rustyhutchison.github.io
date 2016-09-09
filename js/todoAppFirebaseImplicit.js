@@ -109,6 +109,11 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       <div>
+        <SearchBar 
+                	filterText={this.state.filterText}
+                    inStockOnly={this.state.inStockOnly}
+                    onUserInput={this.handleUserInput}
+                 />
         <TodoList3 prospects={ this.state.products } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <div>Name: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
