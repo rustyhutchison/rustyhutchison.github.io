@@ -93,6 +93,11 @@ var FilterableProductTable = React.createClass({
             inStockOnly: false
         };
     },
+	
+	componentWillMount: function() {
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'products');
+  	},
 
 	handleUserInput: function(filterText, inStockOnly) {
         this.setState({
@@ -100,6 +105,8 @@ var FilterableProductTable = React.createClass({
             inStockOnly: inStockOnly
         });
     },
+    
+    
     
     render: function() {
         return (
@@ -131,6 +138,6 @@ var PRODUCTS = [
 ];
  
 ReactDOM.render(
-    <FilterableProductTable products={PRODUCTS} />,
+    <FilterableProductTable  />,
     document.getElementById('container')
 );
