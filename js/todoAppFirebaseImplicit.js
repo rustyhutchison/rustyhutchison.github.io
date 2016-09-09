@@ -43,7 +43,7 @@ var TodoApp3 = React.createClass({
   nameChange: function(e) {
     this.setState({ 
     	name: e.target.value, 
-    	position: e.target.value 
+    	position: e.target.position 
     });
   },
   
@@ -83,7 +83,7 @@ var TodoApp3 = React.createClass({
         <TodoList3 prospects={ this.state.prospects } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <div>Name: <input onChange={ this.nameChange } value={ this.state.name } /></div>
-          <div>Position: <input onChange={ this.nameChange } value={ this.state.position } /></div>
+          <div>Position: <input onChange={ this.nameChange } position={ this.state.position } /></div>
           <div>Height: <input onChange={ this.onChange3 } value={ this.state.height } /></div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
