@@ -55,7 +55,7 @@ var TodoList3 = React.createClass({
     var createItem = function(item, index) {
       return (
         <li key={ index }>
-          <div>key: { item.key }</div>
+          <div>key: { item['.key'] }</div>
           <div>first name: { item.category}</div>
           <div>position: { item.price }</div>
           <div>height: { item.name }</div>
