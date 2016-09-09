@@ -24,6 +24,9 @@ var TodoList3 = React.createClass({
 });
 
 var TodoApp3 = React.createClass({
+  var nextState = {};
+    nextState[e.target.name]=e.target.value;
+  
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -41,8 +44,7 @@ var TodoApp3 = React.createClass({
   },
 
   nameChange: function(e) {
-    var nextState = {};
-    nextState[e.target.name]=e.target.value;
+    
     this.setState(nextState);
   },
   
@@ -59,6 +61,7 @@ var TodoApp3 = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
+    var clearState = {};
     if (this.state.name && this.state.name.trim().length !== 0) {
       this.firebaseRefs['prospects'].push({
         name: this.state.name,
@@ -83,7 +86,7 @@ var TodoApp3 = React.createClass({
         <form onSubmit={ this.handleSubmit }>
           <div>Name: <input onChange={ this.nameChange } value={ this.state.name } name="name"/></div>
           <div>Position: <input onChange={ this.nameChange } value={ this.state.position } name="position"/></div>
-          <div>Height: <input onChange={ this.onChange3 } value={ this.state.height } /></div>
+          <div>Height: <input onChange={ this.onChange3 } value={ this.state.height } name="height"/></div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
