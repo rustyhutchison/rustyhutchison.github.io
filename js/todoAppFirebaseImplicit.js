@@ -1,4 +1,20 @@
 
+var ProductRow = React.createClass({
+    render: function() {
+        var name = this.props.product.stocked ?
+            this.props.product.name :
+            <span style={{color: 'red'}}>
+                {this.props.product.name}
+            </span>;
+        return (
+            <tr>
+                <td>{name}</td>
+                <td>{this.props.product.price}</td>
+            </tr>
+        );
+    }
+});
+
 var SearchBar = React.createClass({
     
     handleChange: function() {
@@ -35,22 +51,8 @@ var SearchBar = React.createClass({
 
 var TodoList3 = React.createClass({
   render: function() {
-  	var rows = [];
-    var lastCategory = null;
-        this.props.products.forEach(function(product) {
-            
-            if (product.name.indexOf(this.props.filterText) === -1 || (!product.stocked && this.props.inStockOnly)) {
-                return;
-            }
-            
-            if (product.category !== lastCategory) {
-                rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
-            }
-            rows.push(<ProductRow product={product} key={product.name} />);
-            lastCategory = product.category;
-        }.bind(this));
     var _this = this;
-    var createItem = function(item, index) {    
+    var createItem = function(item, index) {
       return (
         <li key={ index }>
           <div>key: { item['.key'] }</div>
@@ -65,7 +67,7 @@ var TodoList3 = React.createClass({
         </li>
       );
     };
-    return <ul>{ rows.map(createItem) }</ul>;
+    return <ul>{ this.props.prospects.map(createItem) }</ul>;
   }
 });
 
@@ -126,7 +128,7 @@ var TodoApp3 = React.createClass({
                     inStockOnly={this.state.inStockOnly}
                     onUserInput={this.handleUserInput}
                  />
-        <TodoList3 products={ this.state.products } removeItem={ this.removeItem } />
+        <TodoList3 prospects={ this.state.products } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
           <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
