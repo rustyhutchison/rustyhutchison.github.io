@@ -1,6 +1,4 @@
 
-
-
 var SearchBar = React.createClass({
     
     handleChange: function() {
@@ -37,6 +35,7 @@ var SearchBar = React.createClass({
 
 var TodoList3 = React.createClass({
   render: function() {
+    
     var _this = this;
     var createItem = function(item, index) {
       return (
