@@ -42,11 +42,10 @@ var TodoApp3 = React.createClass({
 
   nameChange: function(e) {
     this.setState({name: e.target.value});
-  },
-  
-  positionChange: function(e) {
     this.setState({position: e.target.value});
   },
+  
+  
   
   onChange3: function(e) {
     this.setState({height: e.target.value});
