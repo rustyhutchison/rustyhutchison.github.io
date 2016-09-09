@@ -42,9 +42,9 @@ var TodoList3 = React.createClass({
       return (
         <li key={ index }>
           <div>key: { item['.key'] }</div>
-          <div>first name: { item.category}</div>
-          <div>position: { item.price }</div>
-          <div>height: { item.name }</div>
+          <div>Category: { item.category}</div>
+          <div>Price: { item.price }</div>
+          <div>Name: { item.name }</div>
           <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
                 style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
                   Delete Player
@@ -116,9 +116,9 @@ var TodoApp3 = React.createClass({
                  />
         <TodoList3 prospects={ this.state.products } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
-          <div>Name: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
-          <div>Position: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
-          <div>Height: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
+          <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
+          <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
+          <div>Name: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
