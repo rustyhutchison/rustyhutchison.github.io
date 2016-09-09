@@ -122,6 +122,7 @@ var FilterableProductTable = React.createClass({
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
                  />
+                 <p>this.props.products.[0][1]</p>
             </div>
         );
     }
