@@ -54,11 +54,17 @@ var TodoApp3 = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    var clearState = {};
-    clearState[e.target.name]=e.target.value;
     if (this.state.name && this.state.name.trim().length !== 0) {
-      this.firebaseRefs['prospects'].push(clearState);
-      this.setState(clearState);
+      this.firebaseRefs['prospects'].push({
+        name: this.state.name,
+        position: this.state.position, // "name:" changes the input attribute category
+        height: this.state.height
+      });
+      this.setState({
+        name: '',
+        position: '',
+        height: ''
+      });
     }
     this.state.name = String.Empty;
     this.state.position = String.Empty;
