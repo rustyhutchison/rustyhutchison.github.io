@@ -109,6 +109,7 @@ var FilterableProductTable = React.createClass({
     
     
     render: function() {
+        var products = this.props.products;
         return (
             <div>
             	<h1>header</h1>
@@ -122,7 +123,11 @@ var FilterableProductTable = React.createClass({
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
                  />
-                 <p>this.props.products.[0][1]</p>
+                 <ol>
+                 {products.map(function(product) {
+                 	return <li key={product['.key']} >product.category</li>;
+                 })}
+                 </ol>
             </div>
         );
     }
