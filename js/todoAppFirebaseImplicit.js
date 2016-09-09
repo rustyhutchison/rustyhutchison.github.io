@@ -41,8 +41,10 @@ var TodoApp3 = React.createClass({
   },
 
   nameChange: function(e) {
-    this.setState({name: e.target.value, 
-    			  position: e.target.value});
+    this.setState({ 
+    	name: e.target.value, 
+    	position: e.target.value 
+    });
   },
   
   
@@ -52,7 +54,7 @@ var TodoApp3 = React.createClass({
   },
 
   removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com');
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
     firebaseRef.child(key).remove();
   },
 
