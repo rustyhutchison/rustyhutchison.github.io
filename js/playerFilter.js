@@ -28,14 +28,16 @@ var FilterableProductTable = React.createClass({
     
     render: function() {
         var products = this.props.products;
+        var createItem = function(item, index) {
+			  return <li key={index} >product.category</li>;
+;
+			};
         return (
             <div>
             	<h1>header</h1>
                 
                  <ol>
-                 {this.props.products.map(function(product) {
-                 	return <li key={product['.key']} >product.category</li>;
-                 })}
+                 {this.props.products.map(createItem)}
                  </ol>
             </div>
         );
