@@ -66,9 +66,7 @@ var TodoApp3 = React.createClass({
         height: ''
       });
     }
-    this.state.name = String.Empty;
-    this.state.position = String.Empty;
-    this.state.height = String.Empty;
+    this.state = String.Empty;
   },
 
   render: function() {
