@@ -87,6 +87,17 @@ var SearchBar = React.createClass({
 
 var FilterableProductTable = React.createClass({
     
+    mixins: [ReactFireMixin],
+
+	
+
+  componentWillMount: function() {
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'products');
+  },
+    
+    debugger;
+    
     getInitialState: function() {
         return {
             filterText: '',
