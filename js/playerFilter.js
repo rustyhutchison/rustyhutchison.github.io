@@ -6,10 +6,8 @@ var ProductCategoryRow = React.createClass({
 });
 
 var ProductRow = React.createClass({
-    
-    var _this = this;
-    
     render: function() {
+        var _this = this;
         var name = this.props.product.stocked ?
             this.props.product.name :
             <span style={{color: 'red'}}>
