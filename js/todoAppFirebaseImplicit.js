@@ -72,19 +72,14 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       <div>
-        <SearchBar 
-                	filterText={this.state.filterText}
-                    inStockOnly={this.state.inStockOnly}
-                    onUserInput={this.handleUserInput}
-                 />
         <TodoList3 products={ this.state.products } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
           <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
           <div>Name: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
 		  <div className="col-sm-9">
-				<label htmlFor="stocked">In Stock?</label>
-				<select onChange={ this.onChange } id="stocked" name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
+				<label >In Stock?</label>
+				<select onChange={ this.onChange } name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
 					<option value="True">True</option>
 					<option value="False">False</option>
 				</select>
