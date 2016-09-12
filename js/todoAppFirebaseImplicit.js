@@ -57,7 +57,8 @@ var ProductInput = React.createClass({
 		  <div className="">
 				<label >Category</label>
 				<select onChange={ this.onChange } name="category" className="form-control standalone" type="select" label="Select" placeholder="select">
-					<option value="Sporting Goods" selected>Sporting Goods</option>
+		   		    <option value="" disabled selected>Select</option>
+			        <option value="Sporting Goods" selected>Sporting Goods</option>
 					<option value="Electronics">Electronics</option>
 					<option value="Auto Parts">Auto Parts</option>
 				</select>
@@ -66,6 +67,7 @@ var ProductInput = React.createClass({
 		  <div className="">
 				<label >In Stock?</label>
 				<select onChange={ this.onChange } name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
+					<option value="" disabled selected>Select</option>
 					<option value="True">True</option>
 					<option value="False">False</option>
 				</select>
