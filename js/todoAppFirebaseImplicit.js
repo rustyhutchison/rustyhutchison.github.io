@@ -28,8 +28,8 @@ var TodoApp3 = React.createClass({
       items: [],
       category: '',
       price: '',
-      stocked: '',
-      name: ''
+      name: '',
+      stocked: false
     };
   },
 
@@ -57,16 +57,16 @@ var TodoApp3 = React.createClass({
         category: this.state.category,
         price: this.state.price, // "name:" changes the input attribute category
         name: this.state.name
+        stocked: this.state.stocked
       });
       this.setState({
         category: '',
       	price: '',
-      	name: ''
+      	name: '',
+      	stocked: false
       });
     }
-    this.state.category = String.Empty;
-    this.state.price = String.Empty;
-    this.state.name = String.Empty;
+    
   },
 
   render: function() {
@@ -82,6 +82,7 @@ var TodoApp3 = React.createClass({
           <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
           <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
           <div>Name: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
+	      <div>In Stock: <input onChange={ this.onChange } type="checkbox" name="stocked" value=true /> True</div>
           <button>{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
