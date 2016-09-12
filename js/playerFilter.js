@@ -7,6 +7,7 @@ var ProductCategoryRow = React.createClass({
 
 var ProductRow = React.createClass({
     render: function() {
+        var _this = this;
         var name = this.props.product.stocked ?
             this.props.product.name :
             <span style={{color: 'red'}}>
@@ -16,7 +17,7 @@ var ProductRow = React.createClass({
             <tr>
                 <td>{name}</td>
                 <td>${this.props.product.price}</td>
-                <td onClick={ this.props.removeItem.bind(null, this.props.product['.key']) } style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
+                <td onClick={ this.props.removeItem.bind(null, _this.props.product['.key']) } style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
                   Delete Player
           		</td>
             </tr>
