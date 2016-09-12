@@ -1,24 +1,4 @@
-var TodoList3 = React.createClass({
-  render: function() {
-    var _this = this;
-    var createItem = function(item, index) {
-      return (
-        <li key={ index }>
-          <div>key: { item['.key'] }</div>
-          <div>Category: { item.category}</div>
-          <div>Price: { item.price }</div>
-          <div>Name: { item.name }</div>
-          <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
-                style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
-                  Delete Player
-          	</span>
-          </div>
-        </li>
-      );
-    };
-    return <ul>{ this.props.products.map(createItem) }</ul>;
-  }
-});
+
 
 var TodoApp3 = React.createClass({
   mixins: [ReactFireMixin],
@@ -72,7 +52,6 @@ var TodoApp3 = React.createClass({
   render: function() {
     return (
       <div className="col-sm-9 text-left">
-        <TodoList3 products={ this.state.products } removeItem={ this.removeItem } />
         <form onSubmit={ this.handleSubmit }>
           <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
           <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
@@ -84,7 +63,7 @@ var TodoApp3 = React.createClass({
 					<option value="False">False</option>
 				</select>
 		  </div>
-          <button>{ 'Add #' + (this.state.items.length + 1) }</button>
+          <button className="btn-default" >{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
     );
