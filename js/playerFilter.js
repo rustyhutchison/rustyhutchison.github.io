@@ -32,9 +32,9 @@ var ProductTable = React.createClass({
             }
             
             if (product.category !== lastCategory) {
-                rows.push(<ProductCategoryRow category={product.category} key={product['.key']} />);
+                rows.push(<ProductCategoryRow category={product.category} key={index} />);
             }
-            rows.push(<ProductRow product={product} key={product['.key']} />);
+            rows.push(<ProductRow product={product} key={index} />);
             lastCategory = product.category;
         }.bind(this));
         return (
