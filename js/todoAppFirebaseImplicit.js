@@ -2,6 +2,9 @@ var TodoList3 = React.createClass({
   render: function() {
     var _this = this;
     var createItem = function(item, index) {
+      if (product.name.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1 || (!product.stocked && this.props.inStockOnly)) {
+                return;
+            }
       return (
         <li key={ index }>
           <div>key: { item['.key'] }</div>
