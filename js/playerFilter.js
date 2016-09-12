@@ -19,7 +19,6 @@ var ProductRow = React.createClass({
                 <td onClick={ _this.props.removeItem.bind(null, product['.key']) } style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
                   Delete Player
           		</td>
-          </div>
             </tr>
             
         );
