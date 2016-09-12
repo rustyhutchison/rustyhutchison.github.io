@@ -94,6 +94,11 @@ var FilterableProductTable = React.createClass({
         };
     },
 
+	componentWillMount: function() {
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
+    this.bindAsArray(firebaseRef.limitToLast(25), 'products');
+  },
+
 	handleUserInput: function(filterText, inStockOnly) {
         this.setState({
             filterText: filterText,
@@ -111,7 +116,7 @@ var FilterableProductTable = React.createClass({
                     onUserInput={this.handleUserInput}
                  />
                 <ProductTable 
-                	products={this.props.products}
+                	products={this.state.products}
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
                  />
