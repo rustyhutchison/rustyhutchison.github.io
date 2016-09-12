@@ -42,11 +42,7 @@ var ProductTable = React.createClass({
                 rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
             }
             rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
-            rows.sort(function(a, b) {
-    			var textA = a.category.toUpperCase();
-    			var textB = b.category.toUpperCase();
-    			return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-			});
+            
             lastCategory = product.category;
         }.bind(this));
         return (
