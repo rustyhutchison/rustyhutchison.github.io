@@ -7,23 +7,17 @@ var ProductCategoryRow = React.createClass({
 
 var ProductRow = React.createClass({
     render: function() {
-        var _this = this;
         var name = this.props.product.stocked ?
             this.props.product.name :
             <span style={{color: 'red'}}>
                 {this.props.product.name}
             </span>;
         return (
-        	<div>
-				<tr>
-					<td>{name}</td>
-					<td>${this.props.product.price}</td>
-				</tr>
-			</div>
-            <div><span onClick={ _this.props.removeItem.bind(null, product['.key']) } style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
-                  Delete Player
-          	</span>
-          </div>
+            <tr>
+                <td>{name}</td>
+                <td>${this.props.product.price}</td>
+            </tr>
+            
         );
     }
 });
@@ -41,7 +35,7 @@ var ProductTable = React.createClass({
             if (product.category !== lastCategory) {
                 rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
             }
-            rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem}/>);
+            rows.push(<ProductRow product={product} key={product.name} />);
             lastCategory = product.category;
         }.bind(this));
         return (
@@ -109,11 +103,6 @@ var FilterableProductTable = React.createClass({
     this.bindAsArray(firebaseRef.limitToLast(25), 'products');
   },
 
-	removeItem: function(key) {
-    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
-    firebaseRef.child(key).remove();
-  },
-	
 	handleUserInput: function(filterText, inStockOnly) {
         this.setState({
             filterText: filterText,
@@ -134,7 +123,6 @@ var FilterableProductTable = React.createClass({
                 	products={this.state.products}
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
-                    removeItem=(this.removeItem)
                  />
             </div>
         );
