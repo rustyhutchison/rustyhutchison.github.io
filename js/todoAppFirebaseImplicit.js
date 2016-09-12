@@ -55,8 +55,14 @@ var ProductInput = React.createClass({
       	<img id="logo" src="img/rh-logo-large.svg" className="img-responsive" />
       	<h2>Input Products</h2>
         <form onSubmit={ this.handleSubmit }>
-          <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
-          <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
+		  <div className="">
+				<label >In Stock?</label>
+				<select onChange={ this.onChange } name="category" className="form-control standalone" type="select" label="Select" placeholder="select">
+					<option value="Sporting Goods">Sporting Goods</option>
+					<option value="Electronics">Electronics</option>
+					<option value="Auto Parts">Auto Parts</option>
+				</select>
+		  </div>          <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
           <div>Name: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
 		  <div className="">
 				<label >In Stock?</label>
