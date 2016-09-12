@@ -42,8 +42,8 @@ var ProductTable = React.createClass({
             
             rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
             rows.sort(function(a, b){
-    			if(a.category < b.category) return -1;
-    			if(a.category > b.category) return 1;
+    			if(a.name < b.name) return -1;
+    			if(a.name > b.name) return 1;
     			return 0;
 				})
             lastCategory = product.category;
