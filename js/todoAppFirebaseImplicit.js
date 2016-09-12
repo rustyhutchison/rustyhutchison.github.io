@@ -2,9 +2,6 @@ var TodoList3 = React.createClass({
   render: function() {
     var _this = this;
     var createItem = function(item, index) {
-      if (item.name.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1 ) {
-                return;
-            }
       return (
         <li key={ index }>
           <div>key: { item['.key'] }</div>
@@ -32,8 +29,7 @@ var TodoApp3 = React.createClass({
       category: '',
       price: '',
       stocked: '',
-      name: '',
-      filterText: ''
+      name: ''
     };
   },
 
@@ -53,12 +49,6 @@ var TodoApp3 = React.createClass({
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
     firebaseRef.child(key).remove();
   },
-
-  handleUserInput: function(filterText) {
-        this.setState({
-            filterText: filterText,
-        });
-    },
 
   handleSubmit: function(e) {
     e.preventDefault();
