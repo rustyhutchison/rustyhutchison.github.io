@@ -5,7 +5,6 @@ var ProductInput = React.createClass({
 
   getInitialState: function() {
     return {
-      items: [],
       category: '',
       price: '',
       name: '',
@@ -43,7 +42,7 @@ var ProductInput = React.createClass({
         category: '',
       	price: '',
       	name: '',
-      	stocked: false
+      	stocked: "True"
       });
     }
     
