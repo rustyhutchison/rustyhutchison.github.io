@@ -1,6 +1,6 @@
 
 
-var TodoApp3 = React.createClass({
+var ProductInput = React.createClass({
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -63,11 +63,11 @@ var TodoApp3 = React.createClass({
 					<option value="False">False</option>
 				</select>
 		  </div>
-          <button className="btn-default" >{ 'Add #' + (this.state.items.length + 1) }</button>
+          <button className="btn-primary" >{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
     );
   }
 });
 
-ReactDOM.render(<TodoApp3 />, document.getElementById('todoApp3'));
+ReactDOM.render(<ProductInput />, document.getElementById('productInput'));
