@@ -27,7 +27,7 @@ var ProductTable = React.createClass({
         var lastCategory = null;
         this.props.products.forEach(function(product) {
             
-            if (product.name.indexOf(this.props.filterText) === -1 || (!product.stocked && this.props.inStockOnly)) {
+            if (product.name.toLowerCase().indexOf(this.props.filterText.toLowerCase()) === -1 || (!product.stocked && this.props.inStockOnly)) {
                 return;
             }
             
@@ -93,7 +93,7 @@ var FilterableProductTable = React.createClass({
     getInitialState: function() {
         return {
             filterText: '',
-            inStockOnly: true
+            inStockOnly: false
         };
     },
 
