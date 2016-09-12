@@ -8,9 +8,9 @@ var ProductCategoryRow = React.createClass({
 var ProductRow = React.createClass({
     render: function() {
         var name = this.props.product.stocked ?
-            this.props.product.name :
+            this.props.product[0] :
             <span style={{color: 'red'}}>
-                {this.props.product.category}
+                {this.props.product.name}
             </span>;
         return (
             <tr>
