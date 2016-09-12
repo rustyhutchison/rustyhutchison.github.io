@@ -66,6 +66,7 @@ var ProductInput = React.createClass({
 		  </div>
           <button className="btn-default" >{ 'Add #' + (this.state.products.length + 1) }</button>
         </form>
+        <img src="img/rh-logo-large.svg" className="img-responsive" />
       </div>
     );
   }
