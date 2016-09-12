@@ -56,7 +56,7 @@ var TodoApp3 = React.createClass({
       this.firebaseRefs['products'].push({
         category: this.state.category,
         price: this.state.price, // "name:" changes the input attribute category
-        name: this.state.name
+        name: this.state.name,
         stocked: this.state.stocked
       });
       this.setState({
