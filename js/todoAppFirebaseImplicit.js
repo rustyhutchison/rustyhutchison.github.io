@@ -56,7 +56,7 @@ var ProductInput = React.createClass({
       	<h2>Input Products</h2>
         <form onSubmit={ this.handleSubmit }>
 		  <div className="">
-				<label >In Stock?</label>
+				<label >Category</label>
 				<select onChange={ this.onChange } name="category" className="form-control standalone" type="select" label="Select" placeholder="select">
 					<option value="Sporting Goods">Sporting Goods</option>
 					<option value="Electronics">Electronics</option>
