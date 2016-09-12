@@ -51,7 +51,7 @@ var ProductInput = React.createClass({
 
   render: function() {
     return (
-      <div className="product-input text-left">
+      <div className="col-sm-9 text-left">
         <form onSubmit={ this.handleSubmit }>
           <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
           <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
@@ -63,7 +63,7 @@ var ProductInput = React.createClass({
 					<option value="False">False</option>
 				</select>
 		  </div>
-          <div className="btn-default" >{ 'Add #' + (this.state.items.length + 1) }</div>
+          <button className="btn-primary" >{ 'Add #' + (this.state.items.length + 1) }</button>
         </form>
       </div>
     );
