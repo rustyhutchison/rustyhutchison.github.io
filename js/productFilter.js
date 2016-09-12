@@ -17,8 +17,9 @@ var ProductRow = React.createClass({
             <tr>
                 <td>{name}</td>
                 <td>${this.props.product.price}</td>
+            	<td>{this.props.product.price}</td>
                 <td onClick={ this.props.removeItem.bind(null, _this.props.product['.key']) } style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
-                  Delete Product
+                  X
           		</td>
             </tr>
             
