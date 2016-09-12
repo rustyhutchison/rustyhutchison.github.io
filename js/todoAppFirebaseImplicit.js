@@ -8,6 +8,7 @@ var ProductInput = React.createClass({
       category: '',
       price: '',
       name: '',
+      stocked: ''
     };
   },
 
@@ -55,7 +56,7 @@ var ProductInput = React.createClass({
         <form onSubmit={ this.handleSubmit }>
 		  <div className="">
 				<label >Category</label>
-				<select value="" onChange={ this.onChange } name="category" className="form-control standalone" type="select" label="Select" placeholder="select">
+				<select onChange={ this.onChange } name="category" className="form-control standalone" type="select" label="Select" placeholder="select">
 		   		    <option value="" defaultValue>Select</option>
 			        <option value="Sporting Goods">Sporting Goods</option>
 					<option value="Electronics">Electronics</option>
@@ -66,7 +67,7 @@ var ProductInput = React.createClass({
 		  <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
 		  <div className="">
 				<label >In Stock?</label>
-				<select value="" onChange={ this.onChange } name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
+				<select onChange={ this.onChange } name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
 					<option value="" defaultValue>Select</option>
 					<option value="True">True</option>
 					<option value="False">False</option>
