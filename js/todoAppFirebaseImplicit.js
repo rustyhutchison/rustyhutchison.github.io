@@ -51,9 +51,6 @@ var SearchBar = React.createClass({
 
 var TodoList3 = React.createClass({
   render: function() {
-    var rows= [];
-    
-    
     var _this = this;
     var createItem = function(item, index) {
       return (
