@@ -83,7 +83,7 @@ var TodoApp3 = React.createClass({
           <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>
           <div>Name: <input onChange={ this.onChange } value={ this.state.name } name="name"/></div>
 		  <div className="col-sm-9">
-				<label htmlFor="stocked">Select Your AAU Club</label>
+				<label htmlFor="stocked">In Stock?</label>
 				<select onChange={ this.onChange } id="stocked" name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
 					<option value="True">True</option>
 					<option value="False">False</option>
