@@ -70,7 +70,7 @@ var ProductInput = React.createClass({
 				<select onChange={ this.onChange } name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
 					<option value="" defaultValue>Select</option>
 					<option value="True">True</option>
-					<option value="False">False</option>
+					<option value="">False</option>
 				</select>
 		  </div>
           <button className="btn-default" >{ 'Add #' + (this.state.products.length + 1) }</button>
