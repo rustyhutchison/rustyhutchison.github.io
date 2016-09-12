@@ -87,6 +87,9 @@ var SearchBar = React.createClass({
 
 var FilterableProductTable = React.createClass({
     
+      mixins: [ReactFireMixin],
+
+    
     getInitialState: function() {
         return {
             filterText: '',
