@@ -51,7 +51,7 @@ var ProductInput = React.createClass({
 
   render: function() {
     return (
-      <div className="col-sm-9 text-left">
+      <div className="product-input text-left">
         <form onSubmit={ this.handleSubmit }>
           <div>Category: <input onChange={ this.onChange } value={ this.state.category } name="category"/></div>
           <div>Price: <input onChange={ this.onChange } value={ this.state.price } name="price"/></div>

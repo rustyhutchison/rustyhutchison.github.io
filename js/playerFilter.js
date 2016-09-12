@@ -123,19 +123,17 @@ var InventoryList = React.createClass({
     
     render: function() {
         return (
-            <div className="text-center">
+            <div className="text-left">
                 <SearchBar 
                 	filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
                     onUserInput={this.handleUserInput}
-                    className="text-left"
                  />
                 <ProductTable 
                 	products={this.state.products}
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
                     removeItem={ this.removeItem }
-                    className="text-left"
                  />
             </div>
         );
