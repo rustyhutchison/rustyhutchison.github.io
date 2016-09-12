@@ -69,7 +69,7 @@ var ProductInput = React.createClass({
 				<label >In Stock?</label>
 				<select onChange={ this.onChange } name="stocked" className="form-control standalone" type="select" label="Select" placeholder="select">
 					<option value="" defaultValue>Select</option>
-					<option value=true>True</option>
+					<option value="True">True</option>
 					<option value="">False</option>
 				</select>
 		  </div>
