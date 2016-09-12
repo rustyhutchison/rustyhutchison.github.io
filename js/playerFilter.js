@@ -6,6 +6,12 @@ var ProductCategoryRow = React.createClass({
 });
 
 var ProductRow = React.createClass({
+    
+    removeItem: function(key) {
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
+    firebaseRef.child(key).remove();
+  },
+    
     render: function() {
         var name = this.props.product.stocked ?
             this.props.product.name :
@@ -17,6 +23,11 @@ var ProductRow = React.createClass({
                 <td>{name}</td>
                 <td>${this.props.product.price}</td>
             </tr>
+            <div><span onClick={ _this.props.removeItem.bind(null, item['.key']) }
+                style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
+                  Delete Player
+          	</span>
+          </div>
         );
     }
 });
@@ -34,7 +45,7 @@ var ProductTable = React.createClass({
             if (product.category !== lastCategory) {
                 rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
             }
-            rows.push(<ProductRow product={product} key={product.name} />);
+            rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem}/>);
             lastCategory = product.category;
         }.bind(this));
         return (
@@ -122,6 +133,7 @@ var FilterableProductTable = React.createClass({
                 	products={this.state.products}
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
+                    removeItem=(this.removeItem)
                  />
             </div>
         );
