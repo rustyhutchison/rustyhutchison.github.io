@@ -136,6 +136,6 @@ var PRODUCTS = [
 ];
  
 ReactDOM.render(
-    <FilterableProductTable products={PRODUCTS} />,
+    <FilterableProductTable />,
     document.getElementById('container')
 );
