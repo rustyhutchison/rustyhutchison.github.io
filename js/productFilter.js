@@ -39,15 +39,19 @@ var ProductTable = React.createClass({
                 return;
             }
             
-            if (product.category !== lastCategory) {
-                rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
-            }
             rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
-            rows.sort(function(a, b){
-    			if(a.category < b.category) return -1;
-    			if(a.category > b.category) return 1;
-    			return 0;
-				})
+            rows.sort(function(a, b) {
+			  var categoryA = a.category.toUpperCase(); // ignore upper and lowercase
+			  var categoryB = b.category.toUpperCase(); // ignore upper and lowercase
+			  if (categoryA < categoryB) {
+				return -1;
+			  }
+			  if (categoryA > categoryB) {
+				return 1;
+			  }
+			  // names must be equal
+			  return 0;
+			});
             lastCategory = product.category;
         }.bind(this));
         return (
