@@ -64,7 +64,7 @@ var ProductInput = React.createClass({
 					<option value="False">False</option>
 				</select>
 		  </div>
-          <button className="btn-default" >{ 'Add #' + (this.state.items.length + 1) }</button>
+          <button className="btn-default" >{ 'Add #' + (this.state.products.length + 1) }</button>
         </form>
       </div>
     );
