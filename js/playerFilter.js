@@ -124,6 +124,7 @@ var InventoryList = React.createClass({
     render: function() {
         return (
             <div className="text-left">
+            	<h2>Filterable Inventory</h2>
                 <SearchBar 
                 	filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
