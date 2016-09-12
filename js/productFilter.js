@@ -41,8 +41,8 @@ var ProductTable = React.createClass({
             
             rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
             rows.sort(function(a, b) {
-			  var categoryA = a.category.toUpperCase(); // ignore upper and lowercase
-			  var categoryB = b.category.toUpperCase(); // ignore upper and lowercase
+			  var categoryA = a.name.toUpperCase(); // ignore upper and lowercase
+			  var categoryB = b.name.toUpperCase(); // ignore upper and lowercase
 			  if (categoryA < categoryB) {
 				return -1;
 			  }
