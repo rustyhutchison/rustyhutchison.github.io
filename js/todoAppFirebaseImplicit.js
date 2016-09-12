@@ -8,7 +8,6 @@ var ProductInput = React.createClass({
       category: '',
       price: '',
       name: '',
-      stocked: true
     };
   },
 
@@ -42,7 +41,7 @@ var ProductInput = React.createClass({
         category: '',
       	price: '',
       	name: '',
-      	stocked: defaultValue
+      	stocked: ''
       });
     }
     
