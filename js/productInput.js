@@ -45,9 +45,7 @@ var ProductInput = React.createClass({
       	stocked: 'True'
       });
     }
-    $("button").click(function() {
-    	$('select').prop('selectedIndex', 0);
-		});
+   $('select').prop('selectedIndex', 0);
   },
 
   render: function() {
