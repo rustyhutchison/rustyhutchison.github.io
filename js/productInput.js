@@ -53,7 +53,6 @@ var ProductInput = React.createClass({
   render: function() {
     return (
       <div className="col-sm-9 text-left">
-      	<img id="logo" src="img/rh-logo-large.svg" className="img-responsive" />
       	<h2>Input Products</h2>
         <form onSubmit={ this.handleSubmit }>
 		  <div className="">
