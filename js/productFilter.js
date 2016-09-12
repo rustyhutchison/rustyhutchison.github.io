@@ -30,9 +30,7 @@ var ProductTable = React.createClass({
     
     
     render: function() {
-        var autoParts = [];
-        var electronics = [];
-        var	sportingGoods = [];
+        var rows = [];
         var lastCategory = null;
         this.props.products.forEach(function(product) {
             
@@ -41,19 +39,14 @@ var ProductTable = React.createClass({
             }
             
             if (product.category !== lastCategory) {
-                if (product.category == "Auto Parts") {
-                	autoParts.push(<ProductCategoryRow category={product.category} key={product.category} />
-                					<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
-                }
-                if (product.category == "Electronics") {
-                	electronics.push(<ProductCategoryRow category={product.category} key={product.category} />
-                					<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
-                }
-                if (product.category == "Sporting Goods") {
-                	sportingGoods.push(<ProductCategoryRow category={product.category} key={product.category} />
-                						<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
-                }
+                rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
             }
+            rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
+            rows.sort(function(a, b){
+    			if(a.category < b.category) return -1;
+    			if(a.category > b.category) return 1;
+    			return 0;
+				})
             lastCategory = product.category;
         }.bind(this));
         return (
@@ -64,14 +57,7 @@ var ProductTable = React.createClass({
                         <th id="price">Price</th>
                     </tr>
                 </thead>
-                <tbody>
-                	<tr>Auto Parts</tr>
-                	<tr>{autoParts}</tr>
-                	<tr>Electronics</tr>
-                	<tr>{electronics}</tr>
-                	<tr>Sporting Goods</tr>
-                	<tr>{sportingGoods}</tr>
-                </tbody>
+                <tbody>{rows}</tbody>
             </table>
         );
     }
