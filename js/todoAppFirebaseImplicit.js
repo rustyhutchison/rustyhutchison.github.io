@@ -32,7 +32,8 @@ var TodoApp3 = React.createClass({
       category: '',
       price: '',
       stocked: '',
-      name: ''
+      name: '',
+      filterText: ''
     };
   },
 
@@ -52,6 +53,12 @@ var TodoApp3 = React.createClass({
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
     firebaseRef.child(key).remove();
   },
+
+  handleUserInput: function(filterText) {
+        this.setState({
+            filterText: filterText,
+        });
+    },
 
   handleSubmit: function(e) {
     e.preventDefault();
