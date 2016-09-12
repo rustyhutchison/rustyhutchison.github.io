@@ -10,12 +10,16 @@ var ProductRow = React.createClass({
         var name = this.props.product.stocked ?
             this.props.product.name :
             <span style={{color: 'red'}}>
-                {this.props.product['.key']}
+                {this.props.product.name}
             </span>;
         return (
             <tr>
                 <td>{name}</td>
                 <td>${this.props.product.price}</td>
+                <td onClick={ _this.props.removeItem.bind(null, product['.key']) } style={{ color: 'red', marginLeft: '10px', cursor: 'pointer' }}>
+                  Delete Player
+          		</td>
+          </div>
             </tr>
             
         );
@@ -23,6 +27,8 @@ var ProductRow = React.createClass({
 });
 
 var ProductTable = React.createClass({
+    
+    
     render: function() {
         var rows = [];
         var lastCategory = null;
@@ -35,7 +41,7 @@ var ProductTable = React.createClass({
             if (product.category !== lastCategory) {
                 rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
             }
-            rows.push(<ProductRow product={product} key={product.name} />);
+            rows.push(<ProductRow product={product} key={product.name} removeItem={this.props.removeItem } />);
             lastCategory = product.category;
         }.bind(this));
         return (
@@ -102,7 +108,12 @@ var FilterableProductTable = React.createClass({
     var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
     this.bindAsArray(firebaseRef.limitToLast(25), 'products');
   },
-
+	
+	removeItem: function(key) {
+    var firebaseRef = new Firebase('https://sweltering-fire-7944.firebaseio.com/demo/products');
+    firebaseRef.child(key).remove();
+  },
+	
 	handleUserInput: function(filterText, inStockOnly) {
         this.setState({
             filterText: filterText,
@@ -123,6 +134,7 @@ var FilterableProductTable = React.createClass({
                 	products={this.state.products}
                     filterText={this.state.filterText}
                     inStockOnly={this.state.inStockOnly}
+                    removeItem={ this.removeItem }
                  />
             </div>
         );
