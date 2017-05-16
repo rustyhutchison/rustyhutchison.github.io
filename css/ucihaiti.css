@@ -1,0 +1,815 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+	min-height: 100%;
+	font-family: 'Raleway', 'Lato',sans-serif;
+	font-weight: 300;
+    font-size: 20px;
+	}
+
+a {
+    color: rgba(53,196,229,1);
+}
+
+
+#support-button  {
+	position: absolute;
+	top: 0;
+	left 5;
+	margin: 15px 0px 0px 25px;
+	padding: 5px 10px 5px 10px;
+	color: white;
+	background: rgba(53,196,229,1);
+	cursor: pointer;
+}
+
+#support-button h4 {
+	margin: 5px 0px 5px 0px;
+}
+
+#support-button hr {
+	border-color: black;
+}
+
+#support-button:hover  {
+	background:  gray;
+}
+
+.section-divider  {
+	border-color: black;
+}
+
+
+#top, #header-container, #header-row, #header-img-left  {
+	height: 100%;
+	}
+
+
+video#bgvid { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100%;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(/img/haiti-header-poster.jpg) no-repeat 50% 50%;
+    background-size: 100% auto;
+    background-color: black;
+	transition: 1s opacity;
+}
+
+@media screen and (min-width: 1160px) {
+	video#bgvid { 
+    width: 100%;
+    height: auto;
+}
+}
+
+#vidpause  {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	border: 1px solid white;
+	border-radius: 25px;
+	height: 50px;
+	width: 50px;
+	padding-top: 10px;
+    padding-left: 13px;
+	
+}
+
+.stopfade { opacity: .5; }
+
+header  {	
+	color: #fff;
+	}
+
+#header-logo  {
+	width: 300px;
+	padding: 20px 10px;
+	margin: 0px auto;
+	}
+
+#header-title  {
+	font-weight: 700;
+	font-size: 50px;	
+	color: #fff;
+	margin-top: 0px;
+	}
+#header-caption  {
+	margin: 10px 0px 0px 0px;
+	}
+	
+#header-caption-bottom  {
+	margin: 10px 0px 30px 0px;
+	}
+
+
+
+@media screen and (max-device-width: 800px) {
+    header {
+         background: url(/img/haiti-header-poster.jpg) #000 no-repeat 50% 15%;
+         background-size: cover;
+    }
+    
+    #header-shadowbox  {
+	padding-top: 13%;
+	}
+    
+    #header-logo  {
+	width: 200px;
+	}
+    
+    #bgvid {
+        display: none;
+    }
+    
+    #header-logo  {
+	padding: 125px 10px 10px 10px;
+	}
+	
+	#vidpause  {
+	display: none;
+	}
+}
+
+#header-shadowbox  {
+	background-color:rgba(0,0,0,.25);
+	padding-top: 8%;
+	height: 100%;
+	}
+
+@media screen and (min-width: 1300px) {
+    
+    #header-shadowbox  {
+	padding-top: 12%;
+	}
+}
+    
+
+.index section {
+	padding: 35px 6%;
+}
+
+section {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.padding-bottom  {
+	padding-bottom: 150px;
+
+}
+
+#mission  {
+	background-color: white;
+	color: gray;
+	background-image: url("../img/home/face-in-crowd-brighter.jpg");
+	background-size: 100%;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+}
+
+#mission-row  {
+	background-color: white;
+}
+
+#mission-org  {
+	color: black;
+	font-family: 'Raleway', Open Sans;
+	font-weight: 500;
+	font-size: 45px;
+}
+
+#mission-container  {
+	border: 1px solid black;
+}
+
+@media screen and (min-width:768px) {
+
+
+
+	#mission-container  {
+	width: 60%;
+}
+}
+
+@media screen and (min-width:1300px) {
+
+#mission  {
+	background-size: cover;
+}
+}
+
+#mission-content  {
+	background-color: white;
+	color: black;
+	margin-top: 0px;
+	margin-bottom: 25px;
+}
+
+#mission-content p {
+	font-family: 'Bilbo Swash Caps', 'Raleway', cursive;
+	color: black;
+	font-size: 27px;
+}
+
+#mission-logo {
+	width: 150px;
+	margin: 25px auto 25px auto;
+}
+
+#goals  {
+	background-color: #e7e7e7;
+	color: black;
+	padding: 50px 0px;
+}
+
+#goals-header  {
+	padding-bottom: 50px;
+}
+
+#goals ul {
+	width: 270px;
+	margin: 50px auto;
+}
+
+@media screen and (min-width: 850px) {
+	#goals ul {
+	width: 270px;
+	margin: 50px auto;
+	}
+}
+
+
+
+@media screen and (min-width: 1200px) {
+	#goals ul {
+	width: 270px;
+	margin: 50px auto;
+	}
+}
+
+#goals-title {
+	display: inline-block;
+	padding: 20px;
+	color: white;
+	background-color: black;
+}
+
+
+#needs  {
+	background: url(/img/photoshopped-img/uci-nutrition.jpg) #000 no-repeat 50% 25%;
+	background-size: cover;
+}
+
+#education  {
+	background: url(/img/photoshopped-img/uci-education.jpg) #000 no-repeat 0% 100%;
+	background-size: cover;
+}
+
+#farming  {
+	background: url(/img/photoshopped-img/uci-farming.jpg) #000 no-repeat 50% 25%;
+	background-size: cover;
+}
+
+@media screen and (min-width: 990px) {
+
+#needs  {
+	background: url(/img/photoshopped-img/uci-nutrition.jpg) #000 no-repeat 0% 25%;
+	background-size: 68% auto;
+}
+#education  {
+	background: url(/img/photoshopped-img/uci-education.jpg) #000 no-repeat 0% 50%;
+	background-size: 89% auto;
+}
+#farming  {
+	background: url(/img/photoshopped-img/uci-farming.jpg) #000 no-repeat 100% 10%;
+	background-size: 68% auto;
+}
+}
+
+hr.style18 { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+hr.style18:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+hr  {
+ border-color: rgba(53,196,229,1);
+}
+
+
+
+.content-logo  {
+	height:15px;
+	display: inline-block;
+	margin: 0px 8px 4px 0px;
+}
+
+.close-gap  {
+	top: -20px;
+	}
+
+@media screen and (min-width: 768px) {
+	.close-gap  {
+		top: 0px;
+	}
+}
+
+.category-title  {
+	padding-top: 20px;
+}
+
+.content-row  {
+	height: 375px;
+	color: white;
+}
+
+.category-content  {
+	background-color:rgba(0,0,0,.40);
+	height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+.category-content  {
+	background-color:rgba(0,0,0,1);
+	font-size: 17px;
+}
+}
+
+@media screen and (min-width: 1000px) {
+.category-content  {
+	background-color:rgba(0,0,0,1);
+	font-size: 20px;
+}
+}
+
+/* --------------------------- Portfolio/Modals css ---------------------------------*/
+
+.modal-content {
+	padding: 100px 5%;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal .lr {
+	height:75px;
+	width:1px;
+	margin-left:35px;
+	background-color:#222;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	z-index:1051
+	}
+
+.portfolio-modal .close-modal .lr .rl {
+	height:75px;
+	width:1px;
+	background-color:#222;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	z-index:1052
+	}
+
+/* --------------------------- about page css ---------------------------------*/
+
+.bold {
+	font-weight: bold;
+}
+
+#supporting-header-container, #supporting-header-row {
+	height: 100%;
+	}
+
+#about-header {
+	background-image: url("../img/about/mompremier-xl.jpg");
+	background-size: cover;
+	background-position: 65% 15%;
+	height: 90%;
+}
+
+
+#supporting-header-shadowbox  {
+	background-color:rgba(0,0,0,.35);
+	height: 100%;
+	padding-top: 23%;
+}
+
+#supporting-header-logo  {
+	width: 175px;
+	margin: 0px auto;
+}
+
+@media screen and (min-width: 768px) {
+#supporting-header {
+	height: 80%;
+}
+
+#supporting-header-shadowbox  {
+	padding-top: 8%;
+}
+}
+
+@media screen and (min-width: 1280px) {
+
+#supporting-header-logo  {
+	width: 275px;
+}
+
+}
+
+#supporting-header-title  {
+	font-weight: 700;
+	font-size: 50px;	
+	}
+	
+#page-caption  {
+	margin: 25px 0px;
+	font-size: 45px;
+}
+
+#page-subheader {
+	background-color: transparent;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: rgba(53,196,229,1);
+    border: none;
+    border-radius: 0px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-bottom: 20px;
+
+}
+
+.btn-info:hover {
+    box-shadow: 10px 10px 10px #373737;
+    background-color: #e7e7e7;
+    color: black;
+    border: 1px solid black;
+}
+
+
+.collapse  {
+	margin-top: 10px;
+}
+
+.box-border  {
+	border: 1px solid black;
+}
+
+.supporting-cat-img  {
+	width: 90%;
+}
+
+.modal-title  {
+	margin-top: 0px;
+}
+
+.board-img {
+	border-radius: 50%;
+	width: 70%;
+	margin: 0px auto;
+}
+
+#beginning  {
+	background-image: url("../img/about/bike-path-refined.jpg");
+	background-size: 100%;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+}
+
+.category-title  {
+	margin-bottom: 0px;
+}
+
+#beginning-caption  {
+	padding: 10px;
+	color: white;
+	
+}
+
+.blue-background  {
+	background-color: rgba(53,196,229,1);
+}
+
+
+@media screen and (min-width: 768px)  {
+.left-margin  {
+    margin-left: 12%;
+}
+}
+
+.three-member-row col-sm-3  {
+	width: 21%;
+}
+
+/* --------------------------- uniting page css ---------------------------------*/
+
+
+#uniting-header {
+	background-image: url("../img/uniting/praying-hands.jpg");
+	background-size: cover;
+	background-position: 65% 0%;
+	height: 90%;
+}
+
+.applications .col-sm-3  {
+	width: 27.8%;
+}
+
+.modal-content p {
+	background-color: white !important;
+	color: black !important;
+}
+
+.applications .col-sm-3 h2, .applications .col-sm-3 p, .applications .col-sm-5 p, .applications .col-sm-5 h2, .applications .col-sm-10 p, .applications .col-sm-10 h2 {
+	background-color: rgba(53,196,229,1);
+	color: white;
+	padding: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.applications .col-sm-3 p, .applications .col-sm-5 p{
+	margin-bottom: 10px;
+}
+
+.applications .col-sm-3 h2,  .applications .col-sm-5 h2,  .applications .col-sm-10 h2  {
+	background-color: black;
+	display: inline-block;
+}
+
+.applications .col-sm-3 .btn-info, .applications .col-sm-10 .btn-info {
+	margin-top: 10px;
+}
+
+#new-house-img {
+	margin-top: 0px;
+}
+
+#uniting-applications  {
+	background-image: url("../img/uniting/church.jpg");
+	background-size: contain;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1280px) {
+	#uniting-applications  {
+	background-size: cover;
+}
+
+}
+
+/* --------------------------- equipping page css ---------------------------------*/
+
+#equipping-header {
+	background-image: url("../img/teaching/school-students-brighter.jpg");
+	background-size: cover;
+	background-position: 65% 98%;
+	height: 90%;
+}
+
+#equipping-applications  {
+	background-image: url("../img/equipping/ag-project-cropped.jpg");
+	background-size:  100% auto ;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+}
+
+
+/* --------------------------- uniting page css ---------------------------------*/
+
+#teaching-header {
+	background-image: url("../img/equipping/equipping-students.jpg");
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 90%;
+}
+
+#teaching-applications  {
+	background-image: url("../img/teaching/school.jpg");
+	background-size: cover;
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1280px) {
+	#uniting-applications  {
+	background-size: cover;
+}
+
+}
+
+/* --------------------------- FAQ page css ---------------------------------*/
+
+
+#faq-header {
+	background-image: url("../img/uniting/uniting.jpg");
+	background-size: cover;
+	background-position: 65% 0%;
+	height: 90%;
+}
+
+#faq-applications  {
+	background-image: url("../img/faq/faq-application.jpg");
+	background-size: cover;
+	background-position: 50% -80%;
+	background-repeat: no-repeat;
+}
+
+.inverted-box {
+	background-color: #000;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+}
+
+.faq-btn  {
+	margin: 0px 0px 2px 20px;
+}
+
+#trip-info ol span {
+	font-weight: 500;
+}
+
+.question {
+	background-color: black;
+	color: white;
+}
+
+#faq {
+	    margin: 25px 0px 0px;
+	    font-size: 45px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 24%;
+    width: 52%;
+    height: 50%;
+}
+
+@media screen and (max-width:700px) {
+	.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+} 
+
+/* --------------------------- contact page css ---------------------------------*/
+
+#contact-header {
+	background: url(/img/uci-smiling-faces.jpg) #000 no-repeat 50% 15%;
+    background-size: cover;
+	background-position: 65% 20%;
+	height: 80%;
+    }
+    
+#contact-container {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+/* --------------------------- support page css ---------------------------------*/
+
+
+#support-header {
+	background-image: url("../img/support/support.jpg");
+	background-size: cover;
+	background-position: 65% 0%;
+	height: 90%;
+}
+
+#thank-you  {
+	background-image: url("../img/support/support-applications.jpg");
+	background-size: 100%;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	height: 900px;
+}
+
+@media screen and (max-width:1100px) {
+	#thank-you  {
+	height: 700px;
+	}
+} 
+
+@media screen and (max-width:670px) {
+	#thank-you  {
+	height: 400px;
+	}
+} 
+
+#thank-you-banner  {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-weight: bold;
+	background-color: rgba(53,196,229,1);
+	color: white;
+	margin-top: 20px;
+
+}
+
+/* --------------------------- footer css ---------------------------------*/
+
+
+footer  {
+	background-color: black;
+	padding: 20px;
+}
+
+footer a {
+	color: black;
+	}
+
+
+footer a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+footer h1 {
+	color: white;
+	margin: 15px 0px 13px 0px;
+}
+
+footer hr {
+	margin: 15px 0px 0px 0px;
+}
+
+footer .col-sm-6  {
+	background-color: rgba(53,196,229,1);
+}
+
+#footer-logo  {
+	max-width: 140px;
+	margin: 20px auto;
+}
+
+.quarter-tile {
+	float: left;
+	padding: 20px;
+	height: 33%;
+	width: 25%;
+}
+
+.tile {
+	padding: 5px;
+}
+
+.half-tile {
+	float: left;
+	padding: 20px;
+	height: 33%;
+	width: 50%;
+}
+
+

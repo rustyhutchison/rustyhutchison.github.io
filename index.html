@@ -1,257 +1,223 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+    <meta name="description" content="UCI Haiti - Helping People See, Know, and Experience God" >    
+    <meta name="author" content="Rusty Hutchison - www.rustyhutchison.com">
+    <title>UCI Haiti</title>
+    
+	<link rel="icon" href="graphics/uci-logo-allblack-icon.png">
+	   
+    <!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">   
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
 
-<style>
-
-	/* Parallax base styles
-  --------------------------------------------- */
-
-  .parallax {
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 300px;
-    perspective: 300px;
-  }
-
-  .parallax__group {
-    position: relative;
-    height: 500px; /* fallback for older browsers */
-    height: 100vh;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .parallax__layer--fore {
-    -webkit-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
-  }
-
-  .parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: 4;
-  }
-
-  .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-300px) scale(2);
-    z-index: 3;
-  }
-
-  .parallax__layer--deep {
-    -webkit-transform: translateZ(-600px) scale(3);
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
-  }
+	<!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,400,300,700,900' rel='stylesheet' type='text/css'>	
+	<link href='https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps' rel='stylesheet' type='text/css'>	
+	<link rel="stylesheet" href="css/ucihaiti.css">
+	<link rel="stylesheet" href="css/uci-navbar.css">
+	
+	<!-- FontAwesome Icons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
 
 
-  /* Debugger styles - used to show the effect
-  --------------------------------------------- */
-
-  .debug {
-    position: fixed;
-    top: 0;
-    left: .5em;
-    z-index: 999;
-    background: rgba(0,0,0,.85);
-    color: #fff;
-    padding: .5em;
-    border-radius: 0 0 5px 5px;
-  }
-  .debug-on .parallax__group {
-    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
- }
-  .debug-on .parallax__layer {
-    box-shadow: 0 0 0 2px #000;
-    opacity: 0.9;
-  }
-  .parallax__group {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-  }
-
-
-  /* demo styles
-  --------------------------------------------- */
-
-  body, html {
-    overflow: hidden;
-  }
-
-  body {
-    font: 100% / 1.5 Arial;
-  }
-
-  * {
-    margin:0;
-    padding:0;
-  }
-
-  .parallax {
-    font-size: 200%;
-  }
-
-   /* centre the content in the parallax layers */
-  .title {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-
-
-  /* style the groups
-  --------------------------------------------- */
-
-  #group1 {
-    z-index: 5; /* slide over group 2 */
-  }
-  #group1 .parallax__layer--base {
-    background: rgb(102,204,102);
-  }
-
-  #group2 {
-    z-index: 3; /* slide under groups 1 and 3 */
-  }
-  #group2 .parallax__layer--back {
-    background: rgb(123,210,102);
-  }
-
-  #group3 {
-    z-index: 4; /* slide over group 2 and 4 */
-  }
-  #group3 .parallax__layer--base {
-    background: rgb(153,216,101);
-  }
-
-  #group4 {
-    z-index: 2; /* slide under group 3 and 5 */
-  }
-  #group4 .parallax__layer--deep {
-    background: rgb(184,223,101);
-  }
-
-  #group5 {
-    z-index: 3; /* slide over group 4 and 6 */
-  }
-  #group5 .parallax__layer--base {
-    background: rgb(214,229,100);
-  }
-
-  #group6 {
-    z-index: 2; /* slide under group 5 and 7 */
-  }
-  #group6 .parallax__layer--back {
-    background: rgb(245,235,100);
-  }
-
-  #group7 {
-    z-index: 3; /* slide over group 7 */
-  }
-  #group7 .parallax__layer--base {
-    background: rgb(255,241,100);
-  }
-
-
-  /* misc
-  --------------------------------------------- */
-  .demo__info {
-    position: absolute;
-    z-index:100;
-    bottom: 1vh;
-    top: auto;
-    font-size:80%;
-    text-align:center;
-    width: 100%;
-  }
-</style>
 </head>
+<body class="index">
 
-<body>
+<!-- Navigation Bar -->
+	
 
-  <div class="parallax">
-    <div id="group1" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-        <iframe src="https://rehomepro.idxhome.com/homesearch/94556" frameborder="0" scrolling="no" onload="resizeIframe(this);" allowtransparency="true">
-<p>Your browser does not support iframes.</p>
-</iframe>
-      </div>
+	<div class="navmenu navmenu-default navmenu-fixed-right offcanvas">
+      <a class="navmenu-brand" href="index">UCI Haiti</a>
+      <ul id="trans-nav" class="nav navmenu-nav">
+        <li><a href="about">About</a></li>
+        <li><a href="teaching">Teaching</a></li>
+        <li><a href="equipping">Equipping</a></li>
+        <li><a href="uniting">Uniting</a></li>
+        <li><a href="faq">Trips & FAQ's</a></li>
+        <li><a href="support">Support</a></li>
+        <li><a href="contact">Contact Us</a></li>
+      </ul>
     </div>
-    <div id="group2" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-    </div>
-    <div id="group3" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-    <div id="group4" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--deep">
-        <div class="title">Deep Background Layer</div>
-      </div>
-    </div>
-    <div id="group5" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-    <div id="group6" class="parallax__group">
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-    <div id="group7" class="parallax__group">
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
-      </div>
-    </div>
-  </div>
 
-  
+    <div class="navbar navbar-default navbar-fixed-top">
+      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+        <span><img id="nav-logo" src="/graphics/uci-logo-white-blackstroke.svg" class="img-responsive" />Menu</span>
+      </button>
+    </div>
+
+	<header id="top" class="">
+        <div id="header-container" class="container-fluid">
+            <div id="header-row" class="row">
+            	<video autoplay loop poster="./img/haiti-header-poster.jpg" id="bgvid">
+					<source src="./video/haiti-header-720-2.webm" type="video/webm">
+					<source src="./video/haiti-header-720-2.mp4" type="video/mp4">
+				</video>              
+				<div id="header-shadowbox" class="col-sm-4" style="cursor: pointer;" onclick="window.location='index';" >
+					<img id="header-logo" src="/graphics/uci-logo-allwhite.svg" class="img-responsive"/>
+					<h1 id="header-title" class="text-center" >UCI Haiti</h1>
+					<hr>
+					<h3 id="header-caption" class="text-center" >Teaching. Equipping. Uniting.</h3>  
+				</div>
+				<div id="vidpause">
+					<i id="button-icon" class="fa fa-pause fa-lg"></i>
+				</div>
+				<div id="support-button" class="text-center" onclick="window.location='https://unitedchristiansinternational.cloverdonations.com/donation-form/';">
+					<h4>Support</h4>
+					<hr style="margin: 0px; background-color: white;">
+					<h4>UCI</h4>
+				<div>
+			</div>                
+        </div>
+    </header>    
+        
+
+	<section id="mission" class="">
+        <div id="mission-container" class="container-fluid">
+            <div id="mission-row" class="row">             
+				<div id="" class="col-sm-offset-2 col-sm-8 text-center">
+					<img id="mission-logo" src="/graphics/uci-logo-allblack.svg" class="img-responsive" />					
+				</div>
+				<div id="mission-content" class=" col-sm-12 text-center">
+					<h1 id="mission-org">United Christians International</h1>
+					<hr class="">
+					<h2>One God. One Lord. One Spirit.<br>One Community.</h2>
+					<hr>
+					<h3 >Ephesians 4:3-6</h3>
+					<p>"Work hard to live together as one by the help of the Holy Spirit. Then there will be peace.  There is 
+					one body and one Spirit. There is one hope in which you were called.  There is one Lord and one faith and 
+					one baptism. There is one God. He is the Father of us all. He is over us all. He is the One working through
+					 us all. He is the One living in us all."</p>
+				</div>
+			</div>                
+        </div>
+    </section> 
+    
+    <section id="goals" class="">
+        <div id="goals-container" class="container">
+            <div id="goals-header" class="row">             
+				<div id="goals-content" class=" col-sm-12 text-center">
+					<h1 id="goals-title" class="text-center" >UCI Haiti Mission</h1>
+					<hr>
+					<h3 id="goals-caption" class="text-center" >Helping People Know & 
+					Experience God By:</h3>
+				</div>
+			</div>
+			<div id="education" class="row content-row" style="cursor: pointer;" onclick="window.location='teaching';"> 
+				<div id="" class="col-sm-offset-8 col-sm-4 text-center category-content close-gap" >
+					<h1 class="category-title">Teaching</h1>
+					<hr>
+					<ul class="list-unstyled text-left">
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Teaching The Bible</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Pastoral Training</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Leadership Development</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>UCI Elementary School</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>UCI University</li>
+					</ul>
+				</div>
+			</div>
+			<div id="farming" class="row content-row" style="cursor: pointer;" onclick="window.location='equipping';"> 
+				<div id="" class="col-sm-4 text-center category-content close-gap" >
+					<h1 class="category-title">Equipping</h1>
+					<hr>
+					<ul class="list-unstyled text-left">
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Training National Leaders</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Agricultural Projects</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Agricultural Training</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Medical Training</li>
+					</ul>
+				</div>
+			</div>
+			<div id="needs" class="row content-row" style="cursor: pointer;" onclick="window.location='uniting';"> 
+				<div id="" class="col-sm-offset-8 col-sm-4 text-center category-content close-gap" >
+					<h1 class="category-title">Uniting</h1>
+					<hr>
+					<ul class="list-unstyled text-left">
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Evangelism</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Nutrition Center</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Health Clinic</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Building</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Service Projects</li>
+						<li><img src="/graphics/uci-logo-blue-blackstroke.svg" class="img-responsive content-logo"/>Short-Term Missions</li>
+					</ul>
+				</div>
+			</div>              
+        </div>
+    </section> 
  
+<footer>
+ 	<div class="container-fluid">
+ 		<div class="row">
+ 			<div class="col-sm-offset-1 col-sm-3 text-center" style="cursor: pointer;" onclick="window.location='index';">
+ 				<img id="footer-logo" src="/graphics/uci-logo-allwhite.svg" class="img-responsive" />
+ 				<hr>
+ 				<h1>UCI Haiti</h1>
+ 			</div>
+ 			<div class="col-sm-offset-1 col-sm-6 text-center">
+				<div class="tile">
+					<a href="about">About</a>
+				</div>
+				<div class="tile">
+					<a href="teaching">Teaching</a>
+				</div>
+				<div class="tile">
+					<a href="equipping">Equipping</a>
+				</div>
+				<div class="tile">
+					<a href="uniting">Uniting</a>
+				</div>
+				<div class="tile">
+					<a href="faq">Trips & FAQ's</a>
+				</div>
+	 			<div class="tile">
+					<a href="support">Support</a>
+				</div>
+ 				<div class="tile">
+					<a href="contact">Contact Us</a>
+				</div>
+			</div>
+ 		</div>
+ 	</div>
+ </footer>	
+	
+	<script>
+			var vid = document.getElementById("bgvid"),
+		pauseButton = document.getElementById("vidpause"),
+		icon = document.getElementById("button-icon");
+		function vidFade() {
+			vid.classList.add("stopfade");
+		}
+		vid.addEventListener('ended', function() {
+			// only functional if "loop" is removed 
+			 vid.pause();
+			// to capture IE10
+			vidFade();
+		});
+		pauseButton.addEventListener("click", function() {
+			vid.classList.toggle("stopfade");
+			if (vid.paused) {
+		vid.play();
+				icon.className = "fa fa-pause fa-lg";
+			} else {
+				vid.pause();
+				icon.className = "fa fa-play fa-lg";
+			}
+		})
+	</script>	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+
 </body>
 </html>

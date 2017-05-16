@@ -1,4 +1,2 @@
-# rustyhutchison.github.io
-Personal Webspace
-
-Creating a place to play.
+# ucihaiti.github.io
+UCI Haiti Website
