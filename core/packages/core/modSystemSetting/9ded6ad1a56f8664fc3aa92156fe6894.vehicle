@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a9c1077fda3414d19ec45d507b9aeb77',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9ded6ad1a56f8664fc3aa92156fe6894',
+  'native_key' => 'enable_gravatar',
+  'object' => '{"key":"enable_gravatar","value":true,"xtype":"combo-boolean","namespace":"core","area":"manager","editedon":null}',
+);

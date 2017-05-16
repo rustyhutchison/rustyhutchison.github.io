@@ -1,0 +1,13 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => false,
+  'unique_key' => 'mime_type',
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd0cacc3c41f13470e0789781dcf6e7fc',
+  'package' => 'modx',
+  'class' => 'modContentType',
+  'signature' => 'bfa4e54a8cd054cb032911b9d2f5b59c',
+  'native_key' => 7,
+  'object' => '{"id":7,"name":"JSON","description":"JSON","mime_type":"application\\/json","file_extensions":".json","headers":"NULL","binary":0}',
+);

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'dcbe780160c12f86bc681a3262aae20c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '9c395bea60524e1b7ac41694f48e3ec8',
+  'native_key' => 'base_help_url',
+  'object' => '{"key":"base_help_url","value":"\\/\\/docs.modx.com\\/display\\/revolution20\\/","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '96af07397fc9fb89059fd91fdc5ae20e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a4098bde539acfcd0e40dc73c1df68c4',
+  'native_key' => 'resource_tree_node_name_fallback',
+  'object' => '{"key":"resource_tree_node_name_fallback","value":"pagetitle","xtype":"textfield","namespace":"core","area":"manager","editedon":null}',
+);

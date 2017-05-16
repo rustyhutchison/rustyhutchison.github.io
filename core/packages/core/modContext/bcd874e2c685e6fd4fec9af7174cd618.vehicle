@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"core\\/modContext\\/bcd874e2c685e6fd4fec9af7174cd618\\/0\\/","target":"return MODX_MANAGER_PATH;","name":"assets"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"core\\/modContext\\/bcd874e2c685e6fd4fec9af7174cd618\\/1\\/","target":"return MODX_MANAGER_PATH;","name":"controllers"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"core\\/modContext\\/bcd874e2c685e6fd4fec9af7174cd618\\/2\\/","target":"return MODX_MANAGER_PATH;","name":"templates"}',
+    ),
+    3 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"core\\/modContext\\/bcd874e2c685e6fd4fec9af7174cd618\\/3\\/","target":"return MODX_MANAGER_PATH;","name":"min"}',
+    ),
+    4 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"core\\/modContext\\/bcd874e2c685e6fd4fec9af7174cd618\\/4\\/","target":"return MODX_MANAGER_PATH;","name":"ht.access"}',
+    ),
+    5 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"core\\/modContext\\/bcd874e2c685e6fd4fec9af7174cd618\\/5\\/","target":"return MODX_MANAGER_PATH;","name":"index.php"}',
+    ),
+    6 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"core\\/modContext\\/bcd874e2c685e6fd4fec9af7174cd618.resolve.core.resolver","target":"return MODX_MANAGER_PATH . \'config.core.php\';","name":"resolve.core"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '67cb38e2c3f40ce95d8f9e2d1a9d11d1',
+  'package' => 'modx',
+  'class' => 'modContext',
+  'signature' => 'bcd874e2c685e6fd4fec9af7174cd618',
+  'native_key' => 'mgr',
+  'object' => '{"key":"mgr","name":"Manager","description":"The default manager or administration context for content management activity.","rank":0}',
+);

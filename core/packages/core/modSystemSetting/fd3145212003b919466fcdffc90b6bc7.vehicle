@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '8dc8f20b4dafa26101f498c3b8d6f59f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'fd3145212003b919466fcdffc90b6bc7',
+  'native_key' => 'site_unavailable_message',
+  'object' => '{"key":"site_unavailable_message","value":"The site is currently unavailable","xtype":"textfield","namespace":"core","area":"site","editedon":null}',
+);

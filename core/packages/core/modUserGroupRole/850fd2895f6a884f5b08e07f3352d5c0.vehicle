@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ee518e7aeb9fa434dadb82aa643f14fb',
+  'package' => 'modx',
+  'class' => 'modUserGroupRole',
+  'signature' => '850fd2895f6a884f5b08e07f3352d5c0',
+  'native_key' => 1,
+  'object' => '{"id":1,"name":"Member","description":"NULL","authority":9999}',
+);

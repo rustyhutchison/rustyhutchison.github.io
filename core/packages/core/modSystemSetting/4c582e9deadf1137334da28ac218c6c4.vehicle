@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3961be48c73b2c2c4e131ab1cd088fcd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '4c582e9deadf1137334da28ac218c6c4',
+  'native_key' => 'modx_browser_tree_hide_tooltips',
+  'object' => '{"key":"modx_browser_tree_hide_tooltips","value":true,"xtype":"combo-boolean","namespace":"core","area":"manager","editedon":null}',
+);

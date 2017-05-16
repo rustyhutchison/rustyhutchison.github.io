@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c06c73e0bb12846436b4e521647a3d4e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7d2e0117b7ddc19ea57f36a2cace7174',
+  'native_key' => 'filemanager_url',
+  'object' => '{"key":"filemanager_url","value":"","xtype":"textfield","namespace":"core","area":"file","editedon":null}',
+);

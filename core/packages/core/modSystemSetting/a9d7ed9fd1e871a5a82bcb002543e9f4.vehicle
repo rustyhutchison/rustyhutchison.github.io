@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '121dfd5fc1deb42c6449e6b700be6a4e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'a9d7ed9fd1e871a5a82bcb002543e9f4',
+  'native_key' => 'cultureKey',
+  'object' => '{"key":"cultureKey","value":"en","xtype":"modx-combo-language","namespace":"core","area":"language","editedon":null}',
+);

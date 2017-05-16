@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e05d22e691a7397063e57f2584ff36e9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'bf3c52ffaad94dedc317bafaffa26337',
+  'native_key' => 'tree_root_id',
+  'object' => '{"key":"tree_root_id","value":"0","xtype":"numberfield","namespace":"core","area":"manager","editedon":null}',
+);

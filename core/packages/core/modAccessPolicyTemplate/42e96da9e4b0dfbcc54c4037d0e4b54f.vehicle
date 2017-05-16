@@ -1,0 +1,88 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Permissions' => 
+    array (
+      'bf5fef99d7a0d8ceb041447aa7f4665b' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"list","description":"perm.list_desc","value":1}',
+        'guid' => '91ebc7431ed286d35dbb0aeb76ba8ab3',
+        'native_key' => NULL,
+        'signature' => 'cd3b3f4decebb0be4060d28787792748',
+      ),
+      '3ac00c34158cf91e6dd105086b6429a3' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"load","description":"perm.load_desc","value":1}',
+        'guid' => '4b0e854100ce9118c3d35d620d911b73',
+        'native_key' => NULL,
+        'signature' => '0f256fe49f849e784deea7e5a7d6a6e8',
+      ),
+      'f5dfc5a828f6791227ad898938719258' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'template',
+          1 => 'name',
+        ),
+        'class' => 'modAccessPermission',
+        'object' => '{"id":null,"template":0,"name":"view","description":"perm.view_desc","value":1}',
+        'guid' => '543c51d08260b06bdb100f1cd3a30598',
+        'native_key' => NULL,
+        'signature' => '599cfdad4343d3c43c0815e91fb817a5',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Permissions' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'template',
+        1 => 'name',
+      ),
+    ),
+  ),
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"type":"php","source":"core\\/modAccessPolicyTemplate\\/42e96da9e4b0dfbcc54c4037d0e4b54f.resolve.policytemplates.resolver","name":"resolve.policytemplates"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3ac01337f0bb1afa2afc446de0ea5825',
+  'package' => 'modx',
+  'class' => 'modAccessPolicyTemplate',
+  'signature' => '42e96da9e4b0dfbcc54c4037d0e4b54f',
+  'native_key' => NULL,
+  'object' => '{"id":null,"template_group":0,"name":"NamespaceTemplate","description":"Namespace Policy Template with all attributes.","lexicon":"permissions"}',
+);
